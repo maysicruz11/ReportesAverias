@@ -1,1 +1,1 @@
-<?php require_once("servicios.html") ?>
+<?php require_once("servicios.html") ?> //LENGUAJE DE COMPILACION
