@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<!--ENLACES HTML BASICOS, PARA ICONOS, FUENTES UTILIZADAS ETC-->
 
 <head>
     <meta charset="UTF-8">
@@ -16,16 +17,19 @@
 </head>
 
 <body>
+    <!--Menu-->
     <header class="header" id="Inicio">
         <img src="img/bx-menu.svg" alt="" class="hamburger">
         <nav class="menu-navigation">
             <a href="#Inicio">Inicio</a>
+            <!--Secciones de la pagina-->
             <a href="#Servicio">Servicio</a>
             <a href="#Portafolio">Portafolio</a>
             <a href="#Expertos">Expertos</a>
             <a href="#Contacto">Contacto</a>
         </nav>
         <div class="contenedor head">
+            <!--Contenedor que contiene la enumeracion de los servicios-->
             <img src="" alt="">
             <h1 class="titulo">Reportanos tus averías</h1>
             <p class="copy">Reporta cualquier Daño, rotura o fallo que impide o perjudica el funcionamiento del mecanismo de tu pos</p>
@@ -35,7 +39,8 @@
         <section class="servicio contenedor" id="Servicio">
             <h2 class="subtitulo">Nuestro servicio</h2>
             <div class="contenedor-servicio">
-                <img src="/img/Card Payment_Flatline.svg" alt="">
+                <img src="/img/CardPayment_Flatline.svg" alt="">
+                <!--Imagenes svg mostradas -->
                 <div class="checklist-servicio">
                     <div class="service">
                         <h3 class="n-servicio"><span class="number">1</span>Mantenimiento de pos</h3>
@@ -61,6 +66,7 @@
 
         </section>
         <section class="gallery" id="Portafolio">
+            <!--Contenedor de imagenes -->
             <div class="contenedor">
                 <h2 class="subtitulo">Reporta tus problemas de pos y trataremos de solucioarlos lo más rápido posible!!</h2>
                 <div class="contenedor-galeria">
@@ -76,9 +82,9 @@
         </section>
         <section class="imagen-light">
             <img src="img/close.svg" alt="" class="close">
-            <img src="img/vet1.jpg" alt="" class="agregar-imagen">
-        </section>
 
+        </section>
+        <!--Contenedor de imagenes svg mostradas al final de la pagina-->
         <section class="contenedor" id="Expertos">
             <h2 class="subtitulo">Expertos en:</h2>
             <section class="experts">
@@ -104,6 +110,7 @@
     <form action="form">
         <h2 class="form_title"></h2>
     </form>
+    <!--Pie de pagina con contacto de redes sociales-->
     <footer id="Contacto">
         <div class="contenedor footer-content">
             <div class="contact-us">
@@ -122,10 +129,12 @@
         </div>
         <div class="line"></div>
     </footer>
-    <script src="//code.tidio.co/ur1pxbvwvo7myboizmwyij4qfq3acucg.js" async></script>
+    <!--Script para llamar el componente tidio que es el que nos ayuda con el chat de la parte final-->
     <script src="js/servicios.js"></script>
+    <!--Script javascript de funcion del menu de la pagina-->
     <script src="js/lightbox.js"></script>
 
+    <script src="//code.tidio.co/ur1pxbvwvo7myboizmwyij4qfq3acucg.js" async></script>
 </body>
 
 </html>
