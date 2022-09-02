@@ -106,12 +106,32 @@
 
     </main>
 
-
-    <form action="form">
-        <h2 class="form_title"></h2>
-    </form>
     <!--Pie de pagina con contacto de redes sociales-->
     <footer id="Contacto">
+        <br>
+        <form class="form" id="form">
+            <h2 class="h2">REPORTE DE AVERIAS</h2>
+            <p class="p" type="Nombre:"><input placeholder="Escribe tu nombre" name="nombre" required></input>
+            </p>
+            <p class="p" type="Empresa:"><input placeholder="Escribe el nombre de tu empresa" name="empresa" required></input>
+            </p>
+            <p class="p" type="Direccion:"><input placeholder="Escribe tu direccion" name="direccion" required></input>
+            </p>
+            <p class="p" type="Telefono:"><input placeholder="Escribe tu telefono" name="telefono" type="number" required></input>
+            </p>
+            <p class="p" type="Descripcion:"><input placeholder="Describe tu averia" name="descripcion" required></input>
+            </p>
+            <input type="submit" id="button" class="button" value="Enviar Reporte">
+            <div class="div">
+                <span class="fa fa-phone"></span>98760350
+                <span class="fa fa-envelope-o"></span> reporteshnbco@gmail.com
+            </div>
+        </form>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+        <script type="text/javascript">
+            emailjs.init('lhWewYuRSWmqtHAFE')
+        </script>
         <div class="contenedor footer-content">
             <div class="contact-us">
                 <h2 class="brand">Bac Credomatic</h2>
@@ -128,13 +148,47 @@
             </div>
         </div>
         <div class="line"></div>
+
     </footer>
     <!--Script para llamar el componente tidio que es el que nos ayuda con el chat de la parte final-->
     <script src="js/servicios.js"></script>
     <!--Script javascript de funcion del menu de la pagina-->
     <script src="js/lightbox.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script src="//code.tidio.co/ur1pxbvwvo7myboizmwyij4qfq3acucg.js" async></script>
+
+
+
+    <script>
+        const btn = document.getElementById('button');
+        const form = document.getElementById('form');
+        document.getElementById('form')
+            .addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                btn.value = 'Enviando...';
+
+                const serviceID = "service_m5f00ss";
+                const templateID = "template_ukbj19n";
+
+                emailjs.sendForm(serviceID, templateID, this.id)
+                    .then(() => {
+                        btn.value = 'Enviar Reporte';
+                        Swal.fire(
+                            'Enviada!',
+                            'Gracias por tu reporte!',
+                            'success',
+                        ).then(function() {
+                            window.location = "servicios.html";
+                        });
+
+                    }, (err) => {
+                        btn.value = 'Enviar Reporte';
+                        alert(JSON.stringify(err));
+                    });
+            });
+    </script>
 </body>
 
 </html>
