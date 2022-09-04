@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<!--ENLACES HTML BASICOS, PARA ICONOS, FUENTES UTILIZADAS ETC-->
 
 <head>
     <meta charset="UTF-8">
@@ -12,20 +13,106 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
     <title>Averías</title>
 
+    <style>
+        .form {
+            width: 340px;
+            height: 600px;
+            background: #e6e6e6;
+            border-radius: 8px;
+            box-shadow: 0 0 40px -10px #000;
+            margin: calc(50vh - 220px) auto;
+            padding: 20px 30px;
+            max-width: calc(100vw - 40px);
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+            position: relative
+        }
+        
+        .h2 {
+            margin: 10px 0;
+            padding-bottom: 10px;
+            width: 180px;
+            color: #78788c;
+            border-bottom: 3px solid #78788c
+        }
+        
+        input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            background: none;
+            outline: none;
+            resize: none;
+            border: 0;
+            font-family: 'Montserrat', sans-serif;
+            transition: all .3s;
+            border-bottom: 2px solid #bebed2
+        }
+        
+        input:focus {
+            border-bottom: 2px solid #78788c
+        }
+        
+        .p:before {
+            content: attr(type);
+            display: block;
+            margin: 28px 0 0;
+            font-size: 14px;
+            color: #5a5a5a
+        }
+        
+        .button {
+            float: right;
+            padding: 8px 12px;
+            margin: 8px 0 0;
+            font-family: 'Montserrat', sans-serif;
+            border: 2px solid #78788c;
+            background: 0;
+            color: #5a5a6e;
+            cursor: pointer;
+            transition: all .3s
+        }
+        
+        .button:hover {
+            background: #78788c;
+            color: #fff
+        }
+        
+        .div {
+            content: 'Hi';
+            position: absolute;
+            bottom: -15px;
+            right: -20px;
+            background: #50505a;
+            color: #fff;
+            width: 320px;
+            padding: 16px 4px 16px 0;
+            border-radius: 6px;
+            font-size: 13px;
+            box-shadow: 10px 10px 40px -14px #000
+        }
+        
+        span {
+            margin: 0 5px 0 15px
+        }
+    </style>
 
 </head>
 
 <body>
+    <!--Menu-->
     <header class="header" id="Inicio">
         <img src="img/bx-menu.svg" alt="" class="hamburger">
         <nav class="menu-navigation">
             <a href="#Inicio">Inicio</a>
+            <!--Secciones de la pagina-->
             <a href="#Servicio">Servicio</a>
             <a href="#Portafolio">Portafolio</a>
             <a href="#Expertos">Expertos</a>
             <a href="#Contacto">Contacto</a>
         </nav>
         <div class="contenedor head">
+            <!--Contenedor que contiene la enumeracion de los servicios-->
             <img src="" alt="">
             <h1 class="titulo">Reportanos tus averías</h1>
             <p class="copy">Reporta cualquier Daño, rotura o fallo que impide o perjudica el funcionamiento del mecanismo de tu pos</p>
@@ -35,7 +122,8 @@
         <section class="servicio contenedor" id="Servicio">
             <h2 class="subtitulo">Nuestro servicio</h2>
             <div class="contenedor-servicio">
-                <img src="/img/Card Payment_Flatline.svg" alt="">
+                <img src="/img/CardPayment_Flatline.svg" alt="">
+                <!--Imagenes svg mostradas -->
                 <div class="checklist-servicio">
                     <div class="service">
                         <h3 class="n-servicio"><span class="number">1</span>Mantenimiento de pos</h3>
@@ -61,24 +149,25 @@
 
         </section>
         <section class="gallery" id="Portafolio">
+            <!--Contenedor de imagenes -->
             <div class="contenedor">
                 <h2 class="subtitulo">Reporta tus problemas de pos y trataremos de solucioarlos lo más rápido posible!!</h2>
                 <div class="contenedor-galeria">
                     <img src="img/pos3.jpg" alt="" class="img-galeria">
-                    <img src="img/poss.avif" alt="" class="img-galeria">
+                    <img src="img/bacPos.jpg" alt="" class="img-galeria">
                     <img src="img/posss.jpg" alt="" class="img-galeria">
                     <img src="img/pos2.jpg" alt="" class="img-galeria">
                     <img src="img/tarjeta.jpg" alt="" class="img-galeria">
-                    <img src="img/pos5.avif" alt="" class="img-galeria">
+                    <img src="img/bacPos1.jpg" alt="" class="img-galeria">
 
                 </div>
             </div>
         </section>
         <section class="imagen-light">
             <img src="img/close.svg" alt="" class="close">
-            <img src="img/vet1.jpg" alt="" class="agregar-imagen">
-        </section>
 
+        </section>
+        <!--Contenedor de imagenes svg mostradas al final de la pagina-->
         <section class="contenedor" id="Expertos">
             <h2 class="subtitulo">Expertos en:</h2>
             <section class="experts">
@@ -100,11 +189,32 @@
 
     </main>
 
-
-    <form action="form">
-        <h2 class="form_title"></h2>
-    </form>
+    <!--Pie de pagina con contacto de redes sociales-->
     <footer id="Contacto">
+        <br>
+        <form class="form" id="form">
+            <h2 class="h2">REPORTE DE AVERIAS</h2>
+            <p class="p" type="Nombre:"><input placeholder="Escribe tu nombre" name="nombre" required></input>
+            </p>
+            <p class="p" type="Empresa:"><input placeholder="Escribe el nombre de tu empresa" name="empresa" required></input>
+            </p>
+            <p class="p" type="Direccion:"><input placeholder="Escribe tu direccion" name="direccion" required></input>
+            </p>
+            <p class="p" type="Telefono:"><input placeholder="Escribe tu telefono" name="telefono" type="number" required></input>
+            </p>
+            <p class="p" type="Descripcion:"><input placeholder="Describe tu averia" name="descripcion" required></input>
+            </p>
+            <input type="submit" id="button" class="button" value="Enviar Reporte">
+            <div class="div">
+                <span class="fa fa-phone"></span>
+                <span class="fa fa-envelope-o"></span>
+            </div>
+        </form>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+        <script type="text/javascript">
+            emailjs.init('lhWewYuRSWmqtHAFE')
+        </script>
         <div class="contenedor footer-content">
             <div class="contact-us">
                 <h2 class="brand">Bac Credomatic</h2>
@@ -121,11 +231,47 @@
             </div>
         </div>
         <div class="line"></div>
-    </footer>
-    <script src="//code.tidio.co/ur1pxbvwvo7myboizmwyij4qfq3acucg.js" async></script>
-    <script src="js/servicios.js"></script>
-    <script src="js/lightbox.js"></script>
 
+    </footer>
+    <!--Script para llamar el componente tidio que es el que nos ayuda con el chat de la parte final-->
+    <script src="js/servicios.js"></script>
+    <!--Script javascript de funcion del menu de la pagina-->
+    <script src="js/lightbox.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+
+
+
+    <script>
+        const btn = document.getElementById('button');
+        const form = document.getElementById('form');
+        document.getElementById('form')
+            .addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                btn.value = 'Enviando...';
+
+                const serviceID = "service_m5f00ss";
+                const templateID = "template_ukbj19n";
+
+                emailjs.sendForm(serviceID, templateID, this.id)
+                    .then(() => {
+                        btn.value = 'Enviar Reporte';
+                        Swal.fire(
+                            'Enviada!',
+                            'Gracias por tu reporte!',
+                            'success',
+                        ).then(function() {
+                            window.location = "servicios.html";
+                        });
+
+                    }, (err) => {
+                        btn.value = 'Enviar Reporte';
+                        alert(JSON.stringify(err));
+                    });
+            });
+    </script>
 </body>
 
 </html>
